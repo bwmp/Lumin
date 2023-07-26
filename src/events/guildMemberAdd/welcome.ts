@@ -1,6 +1,7 @@
 import { AttachmentBuilder, Client, GuildMember, TextChannel } from "discord.js";
 import Canvas from "@napi-rs/canvas";
-import { formatOrdinalNumber, getSettings } from "~/functions/database";
+import { getSettings } from "~/functions/database";
+import { formatOrdinalNumber } from "~/functions/utils";
 
 
 Canvas.GlobalFonts.registerFromPath('./src/assets/fonts/NexaScript-Trial-Regular.ttf', 'NexaScript');

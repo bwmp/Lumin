@@ -1,0 +1,146 @@
+{
+  "wave": {
+    "singular": "{USERNAME} waves at nobody",
+    "plural": "{USERNAME} waves at {MENTION}"
+  },
+  "wink": {
+    "singular": "{USERNAME} winks at nobody",
+    "plural": "{USERNAME} winks at {MENTION}"
+  },
+  "tea": {
+    "singular": "{USERNAME} sips tea",
+    "plural": "{USERNAME} sips tea with {MENTION}"
+  },
+  "bonk": {
+    "singular": "bonk",
+    "plural": "{USERNAME} bonks {MENTION}"
+  },
+  "punch": {
+    "singular": "{USERNAME} punches nobody",
+    "plural": "{USERNAME} punches {MENTION}"
+  },
+  "poke": {
+    "singular": "{USERNAME} pokes nobody",
+    "plural": "{USERNAME} pokes {MENTION}"
+  },
+  "bully": {
+    "singular": "{USERNAME} bullies nobody",
+    "plural": "{USERNAME} bullies {MENTION}"
+  },
+  "pat": {
+    "singular": "{USERNAME} pats nobody",
+    "plural": "{USERNAME} pats {MENTION}"
+  },
+  "kiss": {
+    "singular": "{USERNAME} kisses nobody",
+    "plural": "{USERNAME} kisses {MENTION}"
+  },
+  "kick": {
+    "singular": "{USERNAME} kicks nobody",
+    "plural": "{USERNAME} kicks {MENTION}"
+  },
+  "blush": {
+    "singular": "{USERNAME} blushes",
+    "plural": "{USERNAME} blushes at {MENTION}"
+  },
+  "feed": {
+    "singular": "{USERNAME} feeds nobody",
+    "plural": "{USERNAME} feeds {MENTION}"
+  },
+  "smug": {
+    "singular": "{USERNAME} is smug",
+    "plural": "{USERNAME} is smug at {MENTION}"
+  },
+  "hug": {
+    "singular": "{USERNAME} hugs nobody",
+    "plural": "{USERNAME} hugs {MENTION}"
+  },
+  "cuddle": {
+    "singular": "{USERNAME} cuddles nobody",
+    "plural": "{USERNAME} cuddles {MENTION}"
+  },
+  "cry": {
+    "singular": "{USERNAME} cries",
+    "plural": "{USERNAME} cries at {MENTION}"
+  },
+  "cringe": {
+    "singular": "{USERNAME} cringes",
+    "plural": "{USERNAME} cringes at {MENTION}"
+  },
+  "slap": {
+    "singular": "{USERNAME} slaps nobody",
+    "plural": "{USERNAME} slaps {MENTION}"
+  },
+  "five": {
+    "singular": "{USERNAME} high fives nobody",
+    "plural": "{USERNAME} high fives {MENTION}"
+  },
+  "glomp": {
+    "singular": "{USERNAME} aggressively hugs nobody",
+    "plural": "{USERNAME} aggressively hugs {MENTION}"
+  },
+  "happy": {
+    "singular": "{USERNAME} is happy",
+    "plural": "{USERNAME} is happy with {MENTION}"
+  },
+  "hold": {
+    "singular": "{USERNAME} holds nobody",
+    "plural": "{USERNAME} holds {MENTION}"
+  },
+  "nom": {
+    "singular": "{USERNAME} noms on nobody",
+    "plural": "{USERNAME} noms on {MENTION}"
+  },
+  "smile": {
+    "singular": "{USERNAME} smiles",
+    "plural": "{USERNAME} smiles at {MENTION}"
+  },
+  "throw": {
+    "singular": "{USERNAME} throws nobody",
+    "plural": "{USERNAME} throws {MENTION}"
+  },
+  "lick": {
+    "singular": "{USERNAME} licks nobody",
+    "plural": "{USERNAME} licks {MENTION}"
+  },
+  "bite": {
+    "singular": "{USERNAME} bites nobody",
+    "plural": "{USERNAME} bites {MENTION}"
+  },
+  "dance": {
+    "singular": "{USERNAME} dances",
+    "plural": "{USERNAME} dances with {MENTION}"
+  },
+  "boop": {
+    "singular": "{USERNAME} boops nobody",
+    "plural": "{USERNAME} boops {MENTION}"
+  },
+  "sleep": {
+    "singular": "{USERNAME} sleeps",
+    "plural": "{USERNAME} sleeps with {MENTION}"
+  },
+  "like": {
+    "singular": "{USERNAME} likes",
+    "plural": "{USERNAME} likes {MENTION}"
+  },
+  "kill": {
+    "singular": "{USERNAME} kills nobody",
+    "plural": "{USERNAME} kills {MENTION}"
+  },
+  "tickle": {
+    "singular": "{USERNAME} tickles nobody",
+    "plural": "{USERNAME} tickles {MENTION}"
+  },
+  "nosebleed": {
+    "singular": "{USERNAME} has a nosebleed",
+    "plural": "{USERNAME} has a nosebleed from {MENTION}"
+  },
+  "threaten": {
+    "singular": "{USERNAME} threatens nobody",
+    "plural": "{USERNAME} threatens {MENTION}"
+  },
+  "depression": {
+    "singular": "{USERNAME} is depressed",
+    "plural": "{USERNAME} is depressed because {MENTION}"
+  }
+}

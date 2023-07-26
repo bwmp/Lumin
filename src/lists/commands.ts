@@ -14,7 +14,14 @@ for (const folder of slashcommandFolders) {
     const name = Object.keys(command)[0] as keyof typeof command;
 
     command = { name: command.name ?? name, category: folder, ...command[name] };
-    commands.set(command.name, command);
+
+    if (typeof command.name == 'string') {
+      commands.set(command.name, command);
+    } else {
+      for (const cmdname of command.name) {
+        commands.set(cmdname, command);
+      }
+    }
   }
 }
 logger.info(`${commands.size} slash commands loaded`);

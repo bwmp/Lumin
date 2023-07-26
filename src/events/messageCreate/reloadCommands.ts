@@ -16,11 +16,12 @@ export default async (client: Client, message: Message) => {
     let ownerOnly = [];
     for (let obj of commands) {
       const command = obj[1];
-      logger.info(`Loading command ${command.name}`);
-
+      const name = obj[0];
+      logger.info(`Loading command ${name}`);
+      //check if command.name is a string or an array
       const cmd = new SlashCommandBuilder()
-        .setName(command.name!)
-        .setDescription(truncateString(command.description, 99));
+        .setName(name)
+        .setDescription(truncateString(command.description.replace("{ACTION}", name), 99));
       if (command.options) command.options(cmd);
       if (command.ownerOnly) {
         ownerOnly.push(cmd);

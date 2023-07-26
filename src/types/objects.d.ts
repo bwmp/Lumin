@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, PermissionsBitField, Message, Client, CommandInteraction, ButtonInteraction, ModalSubmitInteraction, ContextMenuCommandInteraction, GuildMember, StringSelectMenuInteraction, AutocompleteInteraction, CommandInteractionOptionResolver, CacheType } from 'discord.js';
 
 export class Command {
-  name?: string;
+  name?: string | string[];
   description: string;
   category?: string;
   usage?: string;

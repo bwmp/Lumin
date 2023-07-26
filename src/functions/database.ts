@@ -30,18 +30,4 @@ export async function getSettings(guildId: string) {
     return { joinmessage, leavemessage, membercount, counting, ticketId, logChannelID, nsfw, staffRole };
 }
 
-export function formatOrdinalNumber(number: number): string {
-    const suffixes = ["th", "st", "nd", "rd"];
-    const remainder = number % 100;
-
-    // If the remainder is between 11 and 13, use "th" suffix
-    if (remainder >= 11 && remainder <= 13) {
-        return number + "th";
-    }
-
-    // Otherwise, use the appropriate suffix based on the last digit
-    const lastDigit = number % 10;
-    return number + (suffixes[lastDigit] || "th");
-}
-
 export default prisma;
