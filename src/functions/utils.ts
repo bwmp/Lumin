@@ -24,8 +24,13 @@ export async function action(interaction: CommandInteraction, author: GuildMembe
     message = actions[action].plural.replace("{USERNAME}", author.user.username).replace("{MENTION}", target.user.username)
   }
   
-  const json = (await fetch(`https://hmtai.hatsunia.cfd/v2/${action}`)).json()
-  const image = (await json).url
+  const image = await fetch(`https://hmtai.hatsunia.cfd/v2/${action}`)
+  .then((res) => res.json())
+  .then((json) => json.url)
+  .catch((e) => {
+    interaction.editReply({ content: "An error occured while fetching the image." })
+    return;
+  })
 
   const embed = new EmbedBuilder()
     .setColor("Aqua")
