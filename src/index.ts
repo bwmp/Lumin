@@ -19,11 +19,11 @@ const client = new Client({
 		GatewayIntentBits.GuildMessages,
 		GatewayIntentBits.GuildMembers,
 		GatewayIntentBits.GuildModeration,
-		GatewayIntentBits.GuildPresences,
+		// GatewayIntentBits.GuildPresences,
 		GatewayIntentBits.GuildMessageReactions,
 		GatewayIntentBits.DirectMessages,
 		GatewayIntentBits.GuildVoiceStates,
-		GatewayIntentBits.MessageContent,
+		// GatewayIntentBits.MessageContent,
 	],
 	allowedMentions: {
 		parse: ['users', 'roles', 'everyone'],
