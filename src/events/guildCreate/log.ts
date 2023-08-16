@@ -1,6 +1,6 @@
 import { Client, EmbedBuilder, Guild, TextChannel } from 'discord.js';
 
-export default async (client: Client, guild: Guild) => {
+export default async (client: Client<true>, guild: Guild) => {
   logger.info(`${client.user?.username} has been added to ${guild.name}`);
   const owner = await guild.fetchOwner();
   const createdTimestamp = Math.round(guild.createdTimestamp / 1000);

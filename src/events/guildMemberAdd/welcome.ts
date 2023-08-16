@@ -18,7 +18,7 @@ const applyText = (canvas: Canvas.Canvas, text: string) => {
   return context.font;
 };
 
-export default async (client: Client, member: GuildMember) => {
+export default async (client: Client<true>, member: GuildMember) => {
 
   const settings = await getSettings(member.guild.id);
 

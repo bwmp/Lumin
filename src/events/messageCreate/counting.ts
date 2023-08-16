@@ -11,7 +11,7 @@ const messages = [
   "The highest number you guys counted to was {MAX}, BUT YOU RUINED IT! THE NUMBER WAS {NUMBER}!",
 ]
 
-export default async (client: Client, message: Message) => {
+export default async (client: Client<true>, message: Message) => {
 
   if (message.author.bot) return;
 

@@ -1,7 +1,7 @@
 import { Client, StageChannel, TextChannel, VoiceChannel } from 'discord.js';
 import { getSettings } from '~/functions/database';
 
-export default async (client: Client) => {
+export default async (client: Client<true>) => {
   setInterval(async () => {
     client.guilds.cache.forEach(async (guild) => {
       const settings = await getSettings(guild.id);

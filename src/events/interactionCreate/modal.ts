@@ -1,7 +1,7 @@
 import { Client, InteractionType, ModalSubmitInteraction } from "discord.js";
 import { Modal } from "~/types/objects";
 
-export default async (client: Client, interaction: ModalSubmitInteraction) => {
+export default async (client: Client<true>, interaction: ModalSubmitInteraction) => {
 
   if (interaction.type != InteractionType.ModalSubmit) return;
 

@@ -28,5 +28,4 @@ model settings {
   membercount  String  @default("{\"channel\": \"false\",\"text\": \"Members: {COUNT}\"}")
   staffRole    String  @default("false")
   counting     String  @default("{\"channel\": \"false\",\"countnumber\": \"1\",\"countmax\": \"1\"}") @db.LongText
-  ticketId     Int     @default(0)
 }

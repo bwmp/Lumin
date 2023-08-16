@@ -5,7 +5,7 @@ const rn = new Date();
 const logDate = `${minTwoDigits(rn.getMonth() + 1)}-${minTwoDigits(rn.getDate())}-${rn.getFullYear()}`;
 function minTwoDigits(n: number) { return (n < 10 ? '0' : '') + n; }
 
-export default (client: Client) => {
+export default (client: Client<true>) => {
 	// Set the global vars
 	global.rn = rn;
 

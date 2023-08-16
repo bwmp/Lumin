@@ -1,7 +1,7 @@
 import { ButtonInteraction, Client, StringSelectMenuInteraction } from "discord.js";
 import { Button } from "~/types/objects";
 
-export default async (client: Client, interaction: ButtonInteraction | StringSelectMenuInteraction) => {
+export default async (client: Client<true>, interaction: ButtonInteraction | StringSelectMenuInteraction) => {
     if (!interaction.isButton() && !interaction.isStringSelectMenu()) return;
     if (!interaction.guild) return;
 

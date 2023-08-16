@@ -22,12 +22,11 @@ export async function getSettings(guildId: string) {
     counting.count = parseInt(counting.count) || 0;
     counting.maxcount = parseInt(counting.maxcount) || 0;
     counting = counting as countingData;
-    const ticketId = settings.ticketId
     const logChannelID = settings.logChannelID
     const nsfw = settings.nsfw
     const staffRole = settings.staffRole
 
-    return { joinmessage, leavemessage, membercount, counting, ticketId, logChannelID, nsfw, staffRole };
+    return { joinmessage, leavemessage, membercount, counting, logChannelID, nsfw, staffRole };
 }
 
 export default prisma;

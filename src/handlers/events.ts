@@ -1,7 +1,7 @@
 import { Client } from 'discord.js';
 import { readdirSync } from 'fs';
 
-export default (client: Client) => {
+export default (client: Client<true>) => {
   const eventFolders = readdirSync('./src/events/');
   let jsFiles = [];
   let amount = 0;

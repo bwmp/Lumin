@@ -15,7 +15,7 @@ export class Command {
   noDefer?: boolean;
   ownerOnly?: boolean;
   options?: (cmd: SlashCommandBuilder) => void | Promise<void>;
-  autoComplete?: (client: Client, interaction: AutocompleteInteraction) => void | Promise<void>;
+  autoComplete?: (interaction: AutocompleteInteraction) => void | Promise<void>;
   execute: (interaction: CommandInteraction, args: Omit<CommandInteractionOptionResolver<CacheType>, "getMessage" | "getFocused">) => void | Promise<void>;
 }
 
@@ -26,7 +26,7 @@ export class ContextMenuCommand<T extends 'User' | 'Message'> {
   ephemeral?: boolean;
   noDefer?: boolean;
   type: T;
-  execute: (interaction: ContextMenuCommandInteraction, client: Client, item: T extends 'User' ? GuildMember : Message<true>) => void | Promise<void>;
+  execute: (interaction: ContextMenuCommandInteraction, item: T extends 'User' ? GuildMember : Message<true>) => void | Promise<void>;
 }
 
 export class Reaction {

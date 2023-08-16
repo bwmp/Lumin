@@ -1,7 +1,7 @@
 import { Client, CommandInteraction } from "discord.js";
 import commands from "~/lists/commands";
 
-export default async (client: Client, interaction: CommandInteraction) => {
+export default async (client: Client<true>, interaction: CommandInteraction) => {
 
     if (!interaction.isChatInputCommand()) return;
     

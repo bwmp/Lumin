@@ -4,7 +4,7 @@ import commands from "~/lists/commands";
 const truncateString = (string: string, maxLength: number) =>
   string.length > maxLength ? `${string.substring(0, maxLength)}…` : string;
 
-export default async (client: Client, message: Message) => {
+export default async (client: Client<true>, message: Message) => {
   if (message.author.bot) return;
   if (message.author.id != process.env.OWNERID) return;
 
@@ -18,7 +18,7 @@ export default async (client: Client, message: Message) => {
       const command = obj[1];
       const name = obj[0];
       logger.info(`Loading command ${name}`);
-      //check if command.name is a string or an array
+
       const cmd = new SlashCommandBuilder()
         .setName(name)
         .setDescription(truncateString(command.description.replace("{ACTION}", name), 99));
