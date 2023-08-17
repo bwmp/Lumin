@@ -16,28 +16,49 @@ export function formatOrdinalNumber(number: number): string {
 
 export async function action(interaction: CommandInteraction, author: GuildMember, target: GuildMember | null) {
   const action = interaction.commandName.toLowerCase() as keyof typeof actions;
-  let message
+  let message;
 
-  if(target == null) {
-    message = actions[action].singular.replace("{USERNAME}", author.user.username)
-  }else{
-    message = actions[action].plural.replace("{USERNAME}", author.user.username).replace("{MENTION}", target.user.username)
+  if (target == null) {
+    message = actions[action].singular.replace("{USERNAME}", author.user.username);
+  } else {
+    message = actions[action].plural
+      .replace("{USERNAME}", author.user.username)
+      .replace("{MENTION}", target.user.username);
   }
-  
-  const image = await fetch(`https://hmtai.hatsunia.cfd/v2/${action}`)
-  .then((res) => res.json())
-  .then((json) => json.url)
-  .catch((e) => {
-    interaction.editReply({ content: "An error occured while fetching the image." })
-    return;
-  })
+
+  let image;
+  let attempts = 0;
+
+  while (!image && attempts < 5) {
+    attempts++;
+
+    try {
+      image = await fetch(`https://hmtai.hatsunia.cfd/v2/${action}`)
+        .then((res) => res.json())
+        .then((json) => json.url);
+    } catch (e) {
+      if(e instanceof Error){
+        console.log(`Error fetching image: ${e.message}`);
+      }else{
+        console.log(`Error fetching image: ${e}`);
+      }
+    }
+
+    if (!image) {
+      interaction.editReply({ content: `Failed to fetch image. Retrying... Attempt ${attempts}/5` });
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+    }
+  }
+
+  if (!image) {
+    return interaction.editReply({ content: "Failed to fetch image." });
+  }
 
   const embed = new EmbedBuilder()
     .setColor("Aqua")
     .setTitle(message)
     .setImage(image)
-    .setTimestamp()
+    .setTimestamp();
 
-  return interaction.editReply({ embeds: [embed] })
-
+  return interaction.editReply({ embeds: [embed] });
 }
