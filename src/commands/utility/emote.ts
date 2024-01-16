@@ -11,6 +11,5 @@ export const emote: Command = {
     const emojiId = emote.match(/([0-9]+)/) || "";
     interaction.guild?.emojis.create({attachment: `https://cdn.discordapp.com/emojis/${emojiId[0]}${animated ? '.gif' : '.png'}`, name});
     interaction.editReply({content: `Emote ${emote} has been stolen!`});
-    // interaction.editReply({content: "This command is currently unimplemented."});
   }
 }
